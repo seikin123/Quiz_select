@@ -11,7 +11,16 @@ const quiz = [
     question: 'エディタを閉じるコマンドは？？',
     answers: [ '⌘ + D', '⌘ + C', '⌘ + W', '⌘ + V'],
     correct: '⌘ + W'
+  }, {
+    question: '全選択をするコマンドは？？',
+    answers: [ '⌘ + A', '⌘ + C', '⌘ + W', '⌘ + V'],
+    correct: '⌘ + A'
+  }, {
+    question: '貼り付けをするコマンドは？？',
+    answers: [ '⌘ + F', '⌘ + C', '⌘ + W', '⌘ + V'],
+    correct: '⌘ + V'
   }
+
 ];
 
 const $window = window;
