@@ -1,28 +1,58 @@
 const quiz = [
   {
-    question: 'コピーをする時のコマンドは',
+    question: '1.コピーをする時のコマンドは',
     answers: [ '⌘ + C', '⌘ + E', '⌘ + S', '⌘ + X'],
     correct: '⌘ + C'
   }, {
-    question: '新規にエディタを開くコマンドは？？',
+    question: '2.新規にエディタを開くコマンドは？？',
     answers: [ '⌘ + B', '⌘ + N', '⌘ + F', '⌘ + D'],
     correct: '⌘ + N'
   }, {
-    question: 'エディタを閉じるコマンドは？？',
+    question: '3.エディタを閉じるコマンドは？？',
     answers: [ '⌘ + D', '⌘ + C', '⌘ + W', '⌘ + V'],
     correct: '⌘ + W'
   }, {
-    question: '全選択をするコマンドは？？',
+    question: '4.全選択をするコマンドは？？',
     answers: [ '⌘ + A', '⌘ + C', '⌘ + W', '⌘ + V'],
     correct: '⌘ + A'
   }, {
-    question: '貼り付けをするコマンドは？？',
+    question: '5.貼り付けをするコマンドは？？',
     answers: [ '⌘ + F', '⌘ + C', '⌘ + W', '⌘ + V'],
     correct: '⌘ + V'
+  }, {
+    question: '6.大文字小文字の区別をする/しないの切替',
+    answers: [ '⌥ + C', '⌥ + E', '⌥ + S', '⌥ + D'],
+    correct: '⌥ + C'
+  }, {
+    question: '7.カーソル行削除',
+    answers: [ '⇧ + ⌘ + K', '⇧ + ⌘ + D', '⌥ + S', '⌥ + D'],
+    correct: '⇧ + ⌘ + K'
+  }, {
+    question: '8.カーソル行を下に移動	',
+    answers: [ '⇧ + ⌘ + ↓', '⌘ + ↓', '⌥ + ↓', '⌥ + ↑'],
+    correct: '⌥ + ↓'
+  }, {
+    question: '9.選択ワードの全マッチを選択',
+    answers: [ '⌘ + F2', '⌘ + F2', '⌥ + F2', '⇧ + ↑'],
+    correct: '⌘ + F2'
+  }, {
+    question: '10.行にインデントを追加',
+    answers: [ '⌘ + ]', '⌘ + @', '⌥ + ]', ']'],
+    correct: '⌘ + ]'
   }
 
+  
 ];
 
+  // スタート表示
+  function startPress(e) {
+    if (!start_game && e.keyCode === 32) {
+    $("#start").hide();
+        return;
+    } else if (!start_game) {
+        return;
+    }
+  }
 const $window = window;
 const $doc = document;
 const $question = $doc.getElementById('js-question');
